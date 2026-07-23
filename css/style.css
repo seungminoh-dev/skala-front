@@ -124,7 +124,9 @@ dt {
 dd {
     margin: 4px 0 12px 24px;
 }
-
+.input-box {
+    display:block;
+}
 .trip-card {
     width: min(100%, 420px);
     margin: 10px auto 28px;
@@ -175,7 +177,7 @@ tbody tr:nth-child(even) {
 }
 
 form {
-    width: min(100%, 760px);
+    width: min(100%, 100%);
     margin: 0 auto;
 }
 
