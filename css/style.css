@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+
+:root {
+    --main-blue: #2563a6;
+    --dark-blue: #174a7e;
+    --light-blue: #eaf3fc;
+    --border-color: #b8cce0;
+    --text-color: #263747;
+    --page-background: #f3f7fb;
+    --content-background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 20px;
+    color: var(--text-color);
+    background-color: var(--page-background);
+    font-family: "Nanum Gothic Coding", monospace;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.centered-page {
+    text-align: center;
+}
+
+header,
+nav,
+main,
+aside,
+.container {
+    width: min(100%, 960px);
+    margin: 0 auto 24px;
+    padding: 28px;
+    background-color: var(--content-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(23, 74, 126, 0.08);
+}
+
+h1,
+h2 {
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    border-bottom: 3px solid var(--main-blue);
+    border-radius: 6px;
+}
+
+h1 {
+    margin: 0 0 24px;
+    padding: 18px;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 28px 0 16px;
+    padding: 12px;
+    font-size: 1.35rem;
+}
+
+header h1,
+nav h2,
+main h2,
+aside h2 {
+    margin-top: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul,
+ol {
+    display: inline-block;
+    margin: 8px auto;
+    padding-left: 28px;
+    text-align: left;
+}
+
+li {
+    margin: 6px 0;
+}
+
+a {
+    color: var(--main-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+hr {
+    margin: 28px 0;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+mark {
+    padding: 2px 5px;
+    background-color: #fff2a8;
+    border-radius: 3px;
+}
+
+dl {
+    display: inline-block;
+    max-width: 720px;
+    text-align: left;
+}
+
+dt {
+    margin-top: 16px;
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+dd {
+    margin: 4px 0 12px 24px;
+}
+
+.trip-card {
+    width: min(100%, 420px);
+    margin: 10px auto 28px;
+    padding: 16px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(23, 74, 126, 0.1);
+    font-weight: 700;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    margin: 16px auto 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+audio {
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    background-color: var(--content-background);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    color: #ffffff;
+    background-color: var(--main-blue);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--light-blue);
+}
+
+form {
+    width: min(100%, 760px);
+    margin: 0 auto;
+}
+
+fieldset {
+    margin: 0 0 22px;
+    padding: 24px;
+    background-color: #fbfdff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+legend {
+    padding: 4px 12px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: min(100%, 420px);
+    min-height: 44px;
+    padding: 10px 12px;
+    color: var(--text-color);
+    background-color: #ffffff;
+    border: 1px solid #91abc4;
+    border-radius: 6px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--main-blue);
+    outline: 2px solid #b8d8f5;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin: 6px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    color: #ffffff;
+    background-color: var(--main-blue);
+}
+
+input[type="reset"] {
+    color: var(--dark-blue);
+    background-color: #dbe8f4;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    filter: brightness(0.92);
+}
+
+small {
+    color: #6c7d8d;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    header,
+    nav,
+    main,
+    aside,
+    .container {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.55rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    th,
+    td {
+        padding: 7px 4px;
+        font-size: 0.8rem;
+    }
+}
