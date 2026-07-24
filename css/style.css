@@ -167,6 +167,40 @@ a:focus {
     margin: 0 0 10px;
 }
 
+.action-section {
+    margin-top: 24px;
+}
+
+.action-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 14px 16px;
+    color: #ffffff;
+    background-color: var(--main-blue);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(23, 74, 126, 0.16);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.game-start-button:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 0 6px 12px rgba(23, 74, 126, 0.24);
+    transform: translateY(-2px);
+}
+
+.game-start-button:focus-visible {
+    background-color: var(--dark-blue);
+    outline: 3px solid #b8d8f5;
+    outline-offset: 3px;
+}
+
 hr {
     margin: 28px 0;
     border: 0;
