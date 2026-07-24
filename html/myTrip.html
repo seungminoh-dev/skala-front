@@ -17,19 +17,25 @@
         <hr>
         <!-- Use Image In Media Folder-->
         <h2>&#128247; 여행 이미지</h2>
-        <img src="/media/japan.jpg" alt="Japan Image">
-        <p class="trip-card">&#128205; 일본(2025)</p>
-        <img src="/media/gangneung.jpg" alt="Korea Gangneung Image">
-        <p class="trip-card">&#128205; 강릉(2024)</p>
+        <section class="trip-grid" aria-label="여행 사진 목록">
+            <article class="trip-card">
+                <img src="/media/japan.jpg" alt="일본 여행 사진">
+                <p class="trip-tag">&#128205; 일본(2025)</p>
+            </article>
+            <article class="trip-card">
+                <img src="/media/gangneung.jpg" alt="강릉 여행 사진">
+                <p class="trip-tag">&#128205; 강릉(2024)</p>
+            </article>
+        </section>
         <hr>
         <!-- Use Image In Media Folder-->
         <h2>&#127916; 여행 영상</h2>
-        <p class="trip-card">&#127804; 아름다운 꽃 영상</p>
+        <p class="media-tag">&#127804; 아름다운 꽃 영상</p>
         <video controls width="300" height="200" autoplay>
             <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
             Your browser dows not suppor the video tag.
         </video>
-        <p class="trip-card">&#127754; 애니메이션 영상</p>
+        <p class="media-tag">&#127754; 애니메이션 영상</p>
         <video controls width="300" height="200" autoplay>
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
             Your browser dows not suppor the video tag.

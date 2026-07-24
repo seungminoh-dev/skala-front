@@ -97,6 +97,76 @@ a:focus {
     text-decoration: underline;
 }
 
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    width: min(100%, 960px);
+    margin: 0 auto 24px;
+}
+
+.content-layout main {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    margin: 0;
+}
+
+.content-layout aside {
+    flex: 0 0 300px;
+    width: auto;
+    margin: 0;
+}
+
+.quick-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.quick-links li {
+    flex: 1 1 auto;
+    margin: 0;
+    text-align: center;
+}
+
+.quick-links a {
+    display: inline-block;
+    padding: 4px 0;
+    color: var(--dark-blue);
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.quick-links a:hover,
+.quick-links a:focus-visible {
+    color: var(--main-blue);
+    text-decoration: underline;
+}
+
+.quick-links a:focus-visible {
+    outline: 3px solid #b8d8f5;
+    outline-offset: 3px;
+}
+
+.intro-list {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    column-count: 2;
+    column-gap: 32px;
+}
+
+.intro-list li {
+    break-inside: avoid;
+    margin: 0 0 10px;
+}
+
 hr {
     margin: 28px 0;
     border: 0;
@@ -127,16 +197,74 @@ dd {
 .input-box {
     display:block;
 }
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
 .trip-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--content-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(23, 74, 126, 0.1);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.trip-card:hover,
+.trip-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(23, 74, 126, 0.24);
+}
+
+.trip-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    object-fit: cover;
+    border: 0;
+    border-radius: 0;
+}
+
+.trip-tag,
+.media-tag {
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    font-weight: 700;
+}
+
+.trip-tag {
+    margin: 0;
+    padding: 16px;
+}
+
+.media-tag {
     width: min(100%, 420px);
     margin: 10px auto 28px;
     padding: 16px;
-    color: var(--dark-blue);
-    background-color: var(--light-blue);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(23, 74, 126, 0.1);
-    font-weight: 700;
+}
+
+.home-page header h1 {
+    animation: title-fade-in 0.8s ease-out both;
+}
+
+@keyframes title-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 img,
@@ -235,6 +363,10 @@ input[type="reset"] {
     font: inherit;
     font-weight: 700;
     cursor: pointer;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 input[type="submit"] {
@@ -248,15 +380,57 @@ input[type="reset"] {
 }
 
 input[type="submit"]:hover,
-input[type="reset"]:hover {
-    filter: brightness(0.92);
+input[type="submit"]:focus-visible {
+    color: #ffffff;
+    background-color: var(--dark-blue);
+}
+
+input[type="reset"]:hover,
+input[type="reset"]:focus-visible {
+    color: #ffffff;
+    background-color: var(--main-blue);
+}
+
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible {
+    outline: 3px solid #b8d8f5;
+    outline-offset: 3px;
+    box-shadow: 0 4px 10px rgba(23, 74, 126, 0.2);
 }
 
 small {
     color: #6c7d8d;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .content-layout main,
+    .content-layout aside {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .quick-links a {
+        display: block;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-list {
+        column-count: 1;
+    }
+
     body {
         padding: 16px 10px;
     }
